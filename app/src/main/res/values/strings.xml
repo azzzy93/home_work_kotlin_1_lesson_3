@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">home_work_kotlin_2_lesson_3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chose_image">Выбор фотографий</string>
+    <string name="chose_image_2">Выбранные фотографии</string>
+    <string name="done">Готово</string>
+</resources>
