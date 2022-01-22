@@ -21,12 +21,24 @@
             tools:ignore="ContentDescription"
             tools:src="@drawable/ic_launcher_background" />
 
-        <View
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/is_chose"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/black_chose_image"
-            android:visibility="gone" />
+            android:background="@drawable/image_background"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
