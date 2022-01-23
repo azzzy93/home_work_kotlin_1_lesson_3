@@ -1,13 +1,15 @@
 package kg.geektech.home_work_kotlin_2_lesson_3.ui.fragments
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import kg.geektech.home_work_kotlin_2_lesson_3.databinding.ListImageBinding
 
 class ImageAdapter(
-    private val images: ArrayList<Int>,
+    private val images: ArrayList<Uri>,
     private val listener: OnItemClickListener?
 ) :
     RecyclerView.Adapter<ImageAdapter.ViewHolder>() {
@@ -30,7 +32,7 @@ class ImageAdapter(
         notifyItemRemoved(position)
     }
 
-    fun getImage(position: Int): Int {
+    fun getImage(position: Int): Uri {
         return images[position]
     }
 
@@ -43,8 +45,8 @@ class ImageAdapter(
             binding.root.setOnLongClickListener(this)
         }
 
-        fun onBind(image: Int) {
-            binding.ivImage.setImageResource(image)
+        fun onBind(uri: Uri) {
+            Glide.with(binding.ivImage).load(uri).into(binding.ivImage)
         }
 
         override fun onClick(v: View?) {
@@ -61,7 +63,6 @@ class ImageAdapter(
             listener?.onItemLongClick(adapterPosition)
             return true
         }
-
     }
 
     interface OnItemClickListener {

@@ -1,17 +1,17 @@
 package kg.geektech.home_work_kotlin_2_lesson_3.ui.fragments
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import kg.geektech.home_work_kotlin_2_lesson_3.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
 
     private lateinit var binding: FragmentSecondBinding
-    private lateinit var listImage: ArrayList<Int>
-    private lateinit var adapter: ImageAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,9 +29,12 @@ class SecondFragment : Fragment() {
     }
 
     private fun initAdapter() {
-        listImage = arrayListOf()
-        listImage.addAll(arguments?.getIntegerArrayList(FirstFragment.FIRST_KEY) as ArrayList<Int>)
-        adapter = ImageAdapter(listImage, null)
+        val listString = arguments?.getStringArrayList(FirstFragment.FIRST_KEY)
+        val list: ArrayList<Uri> = arrayListOf()
+        listString?.forEach {
+            list.add(it.toUri())
+        }
+        val adapter = ImageAdapter(list, null)
         binding.rvSecond.adapter = adapter
     }
 

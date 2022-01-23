@@ -1,7 +1,7 @@
 package kg.geektech.home_work_kotlin_2_lesson_3.ui.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kg.geektech.home_work_kotlin_2_lesson_3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

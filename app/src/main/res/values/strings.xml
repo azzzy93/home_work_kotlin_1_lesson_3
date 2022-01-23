@@ -5,4 +5,5 @@
     <string name="chose_image">Выбор фотографий</string>
     <string name="chose_image_2">Выбранные фотографии</string>
     <string name="done">Готово</string>
+    <string name="error">Вы не дали разрешение на чтение данных. Пожалуйста перезапустите приложение и дайте разрешение!</string>
 </resources>

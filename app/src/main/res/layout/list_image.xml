@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/ic_launcher_background" />
+            tools:src="@drawable/img" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/is_chose"
